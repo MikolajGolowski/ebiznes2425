@@ -1,0 +1,16 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.8.10'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.xerial:sqlite-jdbc:3.39.3.0"
+}
+
+application {
+    mainClass = 'HelloWorldKt'
+}
