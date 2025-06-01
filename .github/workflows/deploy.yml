@@ -25,19 +25,19 @@ jobs:
         run: npm run build
         working-directory: "Zadanie 10/frontend"
 
-    - name: Setup .NET 8
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore "Zadanie 10/backend/backend.sln"
+      - name: Restore dependencies
+        run: dotnet restore "Zadanie 10/backend/backend.sln"
 
-    - name: Build
-      run: dotnet build "Zadanie 10/backend/backend.sln" --no-restore --configuration Release
+      - name: Build
+        run: dotnet build "Zadanie 10/backend/backend.sln" --no-restore --configuration Release
 
-    - name: Run Tests
-      run: dotnet test "Zadanie 10/backend/backend.sln" --no-build --verbosity normal
-    
-    - name: Publish
-      run: dotnet publish "Zadanie 10/backend/backend.sln" -c Release -o ./publish
+      - name: Run Tests
+        run: dotnet test "Zadanie 10/backend/backend.sln" --no-build --verbosity normal
+
+      - name: Publish
+        run: dotnet publish "Zadanie 10/backend/backend.sln" -c Release -o ./publish
