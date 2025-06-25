@@ -1,0 +1,1 @@
+Wszystkie dane dostępne w folderze *Zadanie 7*
